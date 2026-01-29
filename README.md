@@ -1,6 +1,6 @@
 # Privacy Policy for FocusFlow Android App
 
-This repository contains the privacy policy for the FocusFlow Android application.
+This repository contains the privacy policy for the FocusPulse Android application.
 
 ## Privacy Policy
 
