@@ -1,59 +1,93 @@
-# Privacy Policy — FocusPulse
+# FocusPulse — Privacy Policy
 
-**Last updated:** 2026-03-21
-**Effective date:** 2026-03-21
+**Effective Date:** 2026-03-21
+**Last Updated:** 2026-03-21
+**Version:** 1.0.0
 
-This Privacy Policy describes how **Sudarshan Tech Labs** ("we", "us", or "our") handles information in the **FocusPulse** Android application ("the App").
-
----
-
-## 1. About This App
-
-FocusPulse is a focus and Pomodoro timer application. It runs focus sessions with background audio, Do Not Disturb integration, and session statistics. All focus data is stored locally on your device.
+Published by **Sudarshan Tech Labs** | https://sudarshantechlabs.com | sudarshantechlabs@gmail.com
 
 ---
 
-## 2. Data We Do Not Collect
-
-Sudarshan Tech Labs does not operate a backend server for FocusPulse. We do not collect, store, or process your focus session data on any server we control.
+FocusPulse is a Pomodoro and focus timer for Android. It runs structured focus sessions with background audio, automatic Do Not Disturb integration, and detailed productivity statistics. All session data is stored locally on your device.
 
 ---
 
-## 3. Data Stored Locally
+## Data Collection
+
+### Data Stored Locally on Your Device
 
 | Data | Purpose | Storage |
 |---|---|---|
-| Focus session history and statistics | Progress tracking | Room database (on-device) |
-| Timer settings and preferences | Personalisation | DataStore (on-device) |
+| Focus session history (duration, type, date, completion status) | Statistics and progress tracking | Room database on your device |
+| Timer settings and preferences | Personalisation | DataStore on your device |
+| Session streak and productivity stats | Motivation and tracking | Room database on your device |
 
-This data never leaves your device except for crash reports as described below.
+This data never leaves your device except for crash reports described below.
 
----
+### Data Collected by Third-Party Services
 
-## 4. Third-Party Services
+**Firebase Crashlytics:**
+When the App crashes, the following is automatically sent to Firebase Crashlytics:
+- Device model, Android OS version, app version
+- Crash stack trace and error logs
+- No focus session data or personal information is included
 
-### 4.1 Firebase Crashlytics
-
-FocusPulse uses Firebase Crashlytics to detect and report app crashes. When a crash occurs:
-
-- **Data sent:** Device model, OS version, app version, crash stack trace
-- **Not sent:** Focus session data, timer history, or any personal information
-- **Purpose:** Diagnose and fix app stability issues
-- **Stored by Google:** See https://firebase.google.com/support/privacy
-
-### 4.2 Google Play Billing
-
-In-app purchases are processed by Google Play. We do not receive or store payment information.
+**Google Play Billing:**
+In-app purchases are processed by Google Play. Sudarshan Tech Labs does not receive or store payment information.
 
 ---
 
-## 5. Permissions Explained
+## How We Use Your Data
 
-| Permission | Reason |
+| Purpose | Data Used |
 |---|---|
-| `POST_NOTIFICATIONS` | Send alerts when focus sessions or breaks complete |
-| `FOREGROUND_SERVICE` | Keep the timer running when the app is in the background |
-| `FOREGROUND_SERVICE_MEDIA_PLAYBACK` | Required for background audio playback service |
+| Run and track focus sessions | Local session data |
+| Display productivity statistics and charts | Local session history |
+| Play ambient sounds during focus sessions | Device audio (MediaPlayer) |
+| Send session completion notifications | Local notification scheduling |
+| Fix app crashes | Firebase Crashlytics reports |
+
+---
+
+## Background Services
+
+FocusPulse runs two foreground services, visible to you via a persistent notification:
+
+- **TimerService** — Keeps the focus timer running when the App is backgrounded or the screen is off
+- **AudioPlayerService** — Plays ambient sounds (e.g., rain, white noise) during focus sessions
+
+Both services can be stopped at any time by dismissing the notification or closing the App.
+
+---
+
+## Data Storage and Security
+
+- **Session data:** Stored in a Room database in the App's private directory
+- **No cloud storage:** Sudarshan Tech Labs operates no backend server for FocusPulse
+- **Android sandbox:** All data is protected by Android's application sandboxing
+
+## Data Retention
+
+| Data | Retention |
+|---|---|
+| Local focus session data | Until you delete it or uninstall the App |
+| Firebase Crashlytics reports | 90 days (Firebase default) |
+
+---
+
+## Data Sharing
+
+We do not sell your data. The only external data transmission is crash reports sent automatically to Firebase Crashlytics when the App crashes.
+
+---
+
+## Permissions Explained
+
+| Permission | Why It Is Needed |
+|---|---|
+| `POST_NOTIFICATIONS` | Alert you when focus sessions or breaks complete |
+| `FOREGROUND_SERVICE` | Keep the timer running when the App is in the background |
+| `FOREGROUND_SERVICE_MEDIA_PLAYBACK` | Required service type for background audio playback |
 | `WAKE_LOCK` | Prevent the device from sleeping during an active focus session |
 | `ACCESS_NOTIFICATION_POLICY` | Enable Do Not Disturb mode automatically during focus sessions |
 | `VIBRATE` | Haptic feedback when sessions complete |
@@ -62,53 +96,54 @@ In-app purchases are processed by Google Play. We do not receive or store paymen
 
 ---
 
-## 6. Background Services
+## Your Rights and Controls
 
-FocusPulse runs two foreground services:
-
-- **TimerService** — Keeps the focus timer running when the app is backgrounded
-- **AudioPlayerService** — Plays ambient sounds during focus sessions
-
-Both services are visible to the user via a persistent notification and can be stopped at any time.
+- **Stop background services:** Dismiss the persistent notification or close the App
+- **Delete all session data:** Uninstall the App or go to Android Settings > Apps > FocusPulse > Storage > Clear Data
+- **Disable Do Not Disturb integration:** Turn off the setting in App preferences
 
 ---
 
-## 7. Data Retention and Deletion
-
-| Data | Retention |
-|---|---|
-| Local focus session data | Until you delete it or uninstall the App |
-| Firebase Crashlytics reports | 90 days (per Firebase policy) |
-
-To delete all local data: uninstall the App or clear app data via Android Settings.
-
----
-
-## 8. Children's Privacy
+## Children's Privacy
 
 FocusPulse is not directed at children under 13. We do not knowingly collect personal information from children.
 
 ---
 
-## 9. Data Security
+## Changes to This Policy
 
-- All focus data is stored locally in a Room database protected by Android's application sandbox
-- Network communication uses HTTPS/TLS
+We may update this Privacy Policy from time to time. We will notify you of significant changes via:
 
----
+- In-app notification
+- Updated policy date on this page
 
-## 10. Changes to This Policy
-
-We will notify you of significant changes by updating the "Last updated" date. Continued use of the App constitutes acceptance.
+Continued use of FocusPulse after changes become effective constitutes your acceptance of the updated policy.
 
 ---
 
-## 11. Contact
+## Contact Us
 
-**Sudarshan Tech Labs**
-Official website: https://sudarshantechlabs.com
-Company email: sudarshantechlabs@gmail.com
-Developer contact: sunny.sudarshan@gmail.com
+For privacy questions, data access requests, or account deletion:
+
+- **Email:** sudarshantechlabs@gmail.com
+- **Developer:** sunny.sudarshan@gmail.com
+- **Website:** https://sudarshantechlabs.com
+- **Response Time:** Within 48 hours
+
+---
+
+## GDPR Rights (EU Users)
+
+If you are in the European Economic Area, you have the right to:
+
+- **Access** — Request a copy of your personal data
+- **Rectification** — Correct inaccurate data
+- **Erasure** — Request deletion of your data
+- **Restrict Processing** — Limit how we use your data
+- **Data Portability** — Receive your data in a portable format
+- **Object** — Object to certain types of processing
+
+To exercise these rights, contact us at the details above.
 
 ---
 
@@ -116,9 +151,16 @@ Developer contact: sunny.sudarshan@gmail.com
 
 | Data type | Collected | Shared | Purpose |
 |---|---|---|---|
-| Crash logs | Yes (Firebase Crashlytics) | No | App stability |
-| Focus session data | No (local only) | No | — |
+| Focus session data | Local only | No | App functionality |
+| Crash logs | Yes (Crashlytics) | No | App stability |
 
 ---
 
-*This policy applies to the FocusPulse Android application published by Sudarshan Tech Labs.*
+---
+
+**This privacy policy complies with:**
+- Google Play Store requirements
+- GDPR (General Data Protection Regulation)
+- CCPA (California Consumer Privacy Act)
+
+**Last reviewed:** 2026-03-21
